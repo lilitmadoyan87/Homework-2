@@ -1,0 +1,34 @@
+function calcProductOfDigits(number) {
+  number = String(number);
+  let product = 1;
+  for (let i = 0; i < number.length; i++) {
+    product *= number[i]
+  }
+  return product;
+}
+
+function calcSumOfDigits(number) {
+  number = String(number); 
+  let sum = 0;
+  for (let i = 0; i < number.length; i++) {
+    sum += +number[i]
+  }
+  return sum;
+}
+
+function printQuotient(calcProductOfDigits,calcSumOfDigits) {
+  if( calcSumOfDigits(number) === 0 ) {
+    return `Cannot calculate`;
+  } else if( calcProductOfDigits(number) % calcSumOfDigits(number) === 0 ) {
+    return `Quotient is ${calcProductOfDigits(number) / calcSumOfDigits(number)}`;
+  } else if( calcProductOfDigits(number) % calcSumOfDigits(number) !== 0 ) {
+    return `Remainder is ${calcProductOfDigits(number) % calcSumOfDigits(number)}`;
+  }
+} 
+
+let number = +prompt('Enter a number');
+
+// console.log(calcProductOfDigits(number));
+// console.log(calcSumOfDigits(number));
+console.log(printQuotient(calcProductOfDigits, calcSumOfDigits));
+
