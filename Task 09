@@ -1,0 +1,12 @@
+function returnsDigitCombinations(number) {
+  let comb = "";
+  for( let i = 0; i <= number; i++) {
+    for( let j = 0; j <= number; j++) {
+      comb += String(i) + j + "," + " "
+    }
+  }
+  return console.log(n);
+}
+
+let number = 9;
+returnsDigitCombinations(number);
