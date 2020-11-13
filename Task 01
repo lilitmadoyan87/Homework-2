@@ -1,0 +1,11 @@
+function checkDigitContainsInNumber(number, digit) {
+  for(let i = 0; i < number.length; i++) {
+    if(digit === number[i])
+    return console.log(`Digit contains in the number`)
+  } 
+  return console.log(`Digit doesn\`t contain in the number`)
+}
+
+let number = prompt('Enter number');
+let digit = prompt('Enter digit');
+checkDigitContainsInNumber(number, digit); 
