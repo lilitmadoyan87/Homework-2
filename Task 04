@@ -1,0 +1,10 @@
+function isPrime(number) {
+  for(let i=2; i < number; i++) {
+    if(number % i === 0) 
+    return 'Is not prime';
+  }
+  return 'Is prime';
+}
+
+let number = prompt(`Enter a number`);
+console.log(isPrime(number));
