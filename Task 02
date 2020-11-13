@@ -1,0 +1,20 @@
+function printNumber(number) {
+  return console.log(reverseFirstLastDigits(number));
+}
+
+function reverseFirstLastDigits(number) {
+ let newnum = '';
+ for(let i = 0; i < number.length; i++) {
+   if( i === 0 ) {
+    newnum += number[number.length - 1]
+   } else if(i === number.length - 1) {
+     newnum += number[0]
+   } else{
+     newnum += number[i]
+   }
+  }
+  return newnum;
+}
+
+let number = prompt(`Enter a number`);
+printNumber(number);
