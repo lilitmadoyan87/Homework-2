@@ -1,0 +1,16 @@
+function differenceBetweenBiggestSmallestDigits(number) {
+  number = String(number);
+  let max = number[0];
+  let min = number[number.length - 1];
+  for(let i = 0; i < number.length; i++) {
+    if(number[i] > max ) {
+      max = number[i]
+    } else if(number[i] < min) {
+      min = number[i]
+    }      
+  }
+  return max - min;
+}
+
+let number = Math.abs(prompt(`Enker a number`)); 
+console.log(differenceBetweenBiggestSmallestDigits(number));
