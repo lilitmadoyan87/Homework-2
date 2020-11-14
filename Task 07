@@ -1,0 +1,31 @@
+function printfibonacciSeries(n) {
+  let serie = 0
+  let i
+  for(let i = 1; i < n; i++) {
+    if(getFibonacciNumber(i) < n) {
+      serie += ', ' + getFibonacciNumber(i)
+    }
+  }
+    return serie;
+}
+
+function getFibonacciNumber(n) {
+  let num1 = 0; 
+  let num2 = 1; 
+  let fib = 0; 
+  if( n === 0) {
+    return num1;
+  } else if( n === 1) { // n ==1 depqy chi ashxatum, chgitem inchu???
+    return num2;
+  } else if( n > 1) {
+    for (let i = 0; i <= n-1; i++) { 
+      fib = num1 + num2; 
+      num1 = num2; 
+      num2 = fib; 
+    }
+    return num2; 
+  }
+}
+
+let n = +prompt('Enter nth number');
+console.log(printfibonacciSeries(n));
