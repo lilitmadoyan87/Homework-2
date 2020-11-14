@@ -1,0 +1,31 @@
+function isValid(value){
+  switch(value) {
+    case 'Paper':
+    case 'Rock':
+    case 'Scissors':
+      return value;
+      break;
+    default: // Code-i ays masy chi haskanum
+      for(let i = 0; ; i++) {
+        value = prompt(`${value} invalid input, enter correct value.`);     
+      }
+      return value;  
+      break;         
+  }
+}
+
+function whichPlayerWins(player1, player2) {
+   if(player1 === 'Paper' && player2 === 'Rock' || player1 === 'Rock' && player2 === 'Scissors' || player1 === 'Scissors' && player2 === 'Paper') {
+    return 'Player 1 won';
+  } else if(player1 === 'Rock' && player2 === 'Paper' || player1 === 'Scissors' && player2 === 'Rock' || player1 === 'Paper' && player2 === 'Scissors') {
+    return 'Player 2 won';
+  } else if(player1 === player2) {
+    return 'Draw! Enter new values.';
+  }
+}
+
+let player1 = prompt('Player 1 : Enter value');
+let player2 = prompt('Player 2: Enter value');
+alert(whichPlayerWins(player1, player2));
+// console.log(isValid(player1));
+// console.log(isValid(player2));
