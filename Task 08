@@ -1,0 +1,10 @@
+function calcSequence(n) {
+  let sequence = 0;
+  for(let i = 1, j = 0; i <= n; i+=2, j++) {
+    sequence += (1/i)*(-1)**j
+  }
+  return sequence;
+}
+
+let n = +prompt('Enter a number')
+console.log(calcSequence(n));
